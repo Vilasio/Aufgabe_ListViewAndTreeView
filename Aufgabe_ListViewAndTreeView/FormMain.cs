@@ -51,13 +51,14 @@ namespace Aufgabe_ListViewAndTreeView
             for (int i = 0; i < this.listView1.Items.Count; i++)
             {
                 listView1.Items[i].Selected = false;
+                listView1.Items[i].BackColor = Color.White;
             }
             TreeNode node =  this.treeView1.GetNodeAt(e.X, e.Y);
             ListViewItem item = (this.listView1.FindItemWithText(node.Text));
             //item.BackColor = Color.LightSteelBlue;
             listView1.Items[item.Index].Selected = true;
             listView1.Select();
-
+            listView1.Items[item.Index].BackColor = Color.Red;
         }
     }
 }
